@@ -1,0 +1,352 @@
+/* Reset e estilos gerais */
+* {
+    text-decoration: none;
+    color: #000000;
+    list-style-type: none;
+    user-select: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Área do body com o menu no cabeçalho */
+body {
+    background-image: radial-gradient(circle farthest-corner at 48.4% 47.5%, rgba(122, 183, 255, 1) 0%, rgba(21, 83, 161, 1) 90%);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+}
+
+/* Cabeçalho e Menu */
+.cabecalho {
+    width: 100%;
+}
+
+.menu {
+    font-weight: 700;
+    font-size: 1.875rem; /* 30px em rem */
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.menu li {
+    background-image: linear-gradient(178.7deg, rgba(126, 184, 253, 1) 5.6%, rgba(2, 71, 157, 1) 95.3%);
+    border: 1px solid linear-gradient(178.7deg, rgba(126, 184, 253, 1) 5.6%, rgba(2, 71, 157, 1) 95.3%);
+    border-radius: 10px;
+    padding: 0.3125rem 3.125rem; /* 5px 50px em rem */
+    margin: 0.625rem; /* 10px em rem */
+    display: inline-block;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Barra de Titulo com o Nome */
+section.title {
+    padding: 2rem;
+    margin-top: 10rem;
+    text-align: center;
+    color: rgb(27, 27, 27);
+}
+
+.title__bio {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid #000;
+    padding-right: 2rem;
+    max-width: 0;
+    white-space: nowrap;
+    animation: pisca normal infinite .8s, escrever normal 5s steps(40) both;
+    color: #090909;
+}
+
+.title__bio::after {
+    display: inline-block;
+    overflow: hidden;
+    border-right: 2px solid #811212;
+    padding-right: 3px;
+    max-width: 0;
+    white-space: nowrap;
+    animation: pisca normal inherit .8s, escrever normal 5s steps(40) both;
+    color: #090909;
+}
+
+/* Implementando o keyframes na apresentação do nome */
+@keyframes pisca {
+    100% {
+        border-right-color: transparent;
+    }
+}
+
+@keyframes escrever {
+    100% {
+        max-width: 100%;
+    }
+}
+
+/* Sobre mim */
+.sobre-container {
+    font-size: 1rem; /* Ajustado para melhor responsividade */
+    padding: 2rem;
+    margin: 2rem auto;
+    margin-top: 15rem;
+    text-align: center;
+}
+
+.sobre-container h3 {
+    font-size: 3rem; /* Ajustado para melhor responsividade */
+    margin-bottom: 1rem;
+}
+
+.sobre-container p {
+    text-align: justify;
+    font-size: 1.5rem;
+    max-width: 1000px; /* Limita a largura do texto */
+    margin: 0 auto;
+}
+
+/* Área da Formação Acadêmica */
+.container {
+    padding: 2rem;
+    margin-top: 20rem;
+}
+
+.container h3 {
+    font-size: 2rem; /* Ajustado para melhor responsividade */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.formacao-academic {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens */
+}
+
+.academic-box {
+    text-align: center;
+    padding: 2rem;
+    margin: 1rem;
+    width: 400px; /* Ajustado para melhor responsividade */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.img-box img {
+    max-width: 150px; /* Ajustado para melhor responsividade */
+    max-height: 100px; /* Ajustado para melhor responsividade */
+}
+
+/* Campo da área de Projetos */
+.container-projeto {
+    padding: 2rem;
+    margin-top: 25rem;
+}
+
+.container-projeto h3 {
+    font-size: 2rem; /* Ajustado para melhor responsividade */
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.projeto-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens */
+    max-width: 1400px; /* Limita a largura do container dos projetos */
+    margin: 0 auto; 
+}
+
+.img-projeto {
+    width: 700px; /* Ajustado para melhor responsividade */
+    margin: 1rem;
+    border: 4px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.img-projeto img {
+    width: 100%;
+    height: auto;
+}
+
+.img-projeto:hover {
+    border-color: rgba(21, 83, 161, 1);
+}
+
+/* Campo de Formulario de Contato */
+.contato {
+    padding: 2rem;
+    margin-top: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contato h2 {
+    font-size: 2rem; /* Ajustado para melhor responsividade */
+}
+
+.contato h3 {
+    padding: 1rem;
+}
+
+.contato-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px; /* Limita a largura do formulário */
+    margin: 0 auto;
+}
+
+.formcontato-input,
+.formcontato-textarea,
+.formcontato-botao {
+    margin-bottom: 1rem;
+    font-size: 1rem; /* Ajustado para melhor responsividade */
+}
+
+.formcontato-input,
+.formcontato-botao {
+    padding: 0.5rem;
+}
+
+.formcontato-textarea {
+    padding: 0.5rem;
+}
+
+/* Copyright */
+.copyright-text {
+    text-align: center;
+    padding: 0.5rem;
+    background: linear-gradient(178.7deg, rgba(126, 184, 253, 1) 5.6%, rgba(2, 71, 157, 1) 95.3%);
+    margin-top: 2rem;
+}
+
+.copyright-text p {
+    font-size: 0.875rem; /* Ajustado para melhor responsividade */
+}
+
+
+/* Responsividade */
+@media (max-width: 1440px) {
+    .menu {
+        font-size: 1.2rem;
+    }
+
+    .title__bio {
+        font-size: 1.5rem;
+    }
+
+    .sobre-container h3 {
+        font-size: 3rem;
+    }
+
+    .container h3 {
+        font-size: 2rem;
+    }
+
+    .academic-box, .projeto-list, .img-projeto {
+        max-width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+
+    .formcontato-input, .formcontato-textarea {
+        font-size: 0.875rem;
+    }
+
+    .formcontato-botao {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title__bio {
+        font-size: 1.25rem;
+    }
+
+    .sobre-container {
+        padding: 1rem;
+        font-size: 1.25rem;
+    }
+
+    .container h3 {
+        font-size: 1.5rem;
+    }
+
+    .contato-form {
+        width: 100%;
+    }
+
+    .formcontato-input, .formcontato-textarea {
+        font-size: 0.75rem;
+    }
+
+    .formcontato-botao {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 800px) {
+    .menu {
+        font-size: 1rem;
+    }
+
+    .title__bio {
+        font-size: 1rem;
+    }
+
+    .sobre-container {
+        font-size: 1rem;
+    }
+
+    .container h3 {
+        font-size: 1.25rem;
+    }
+
+    .academic-box, .img-projeto {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .formcontato-input, .formcontato-textarea {
+        font-size: 0.625rem;
+    }
+
+    .formcontato-botao {
+        font-size: 0.625rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .title__bio {
+        font-size: 0.875rem;
+    }
+
+    .sobre-container {
+        font-size: 0.875rem;
+    }
+
+    .container h3 {
+        font-size: 1rem;
+    }
+
+    .formcontato-input, .formcontato-textarea {
+        font-size: 0.5rem;
+    }
+
+    .formcontato-botao {
+        font-size: 0.5rem;
+    }
+}
